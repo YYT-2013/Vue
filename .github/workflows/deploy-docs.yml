@@ -10,7 +10,10 @@ on:
 jobs:
   docs:
     runs-on: ubuntu-latest
-
+  build-and-deploy:   # 这里可能是你的 job 名称，比如 deploy
+    permissions:
+      contents: write   # 授予写入仓库内容的权限
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
